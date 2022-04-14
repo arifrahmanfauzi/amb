@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('tittle')
-        <title>Bab</title>
+        <title>Bab {{ $id }}</title>
 @endsection
 @section('app-content')
 <div class="app-content">
@@ -22,7 +22,7 @@
                             <div class="widget-action-list-container">
                                 <ul class="list-unstyled d-flex no-m">
                                     <li class="widget-action-list-item">
-                                        <a href="kosa-kata.html"
+                                        <a href="{{ url('/bab-' . $id .'/mufrodat') }}"
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">

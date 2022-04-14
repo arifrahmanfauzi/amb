@@ -11,6 +11,9 @@ Route::get('/beranda', function () {
 Route::get('/maharotul-istima', function () {
     return view('maharotul-istima');
 });
-Route::get('/bab-{id}', function () {
-    return view('bab.blade.php');
+Route::get('/bab-{id}', function ($id) {
+    return view('bab', ['id' => $id]);
+});
+Route::get('/bab-{id}/mufrodat', function () {
+    return view('mufrodat');
 });
