@@ -14,4 +14,8 @@ class TadribController extends Controller
         $tadrib = $bab->where('bab', $id)->with('berkas')->with('jawaban')->get();
         return $tadrib;
     }
+    public function create(Request $request, $id)
+    {
+
+    }
 }

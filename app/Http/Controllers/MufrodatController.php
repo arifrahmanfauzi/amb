@@ -75,4 +75,19 @@ class MufrodatController extends Controller
         $mufrot = $bab->where('bab', $id)->where('id', $mufrodat)->with('berkas')->get();
         return $mufrot;
     }
+
+    public function viewMufrodat($id)
+    {
+        $mufrodat = new Mufrodat();
+        $data = $mufrodat->where('bab', $id)->with('berkas')->get();
+
+        return view('mufrodat', ['data' => $data, 'id' => $id]);
+    }
+    public function viewMufrodatbyID(Request $request, $id, $mufrodat)
+    {
+        $bab = new Mufrodat();
+
+        $mufrot = $bab->where('bab', $id)->where('id', $mufrodat)->with('berkas')->get();
+        return view('mufrodatID', ['id'=>$id, 'data'=>$mufrot]);
+    }
 }

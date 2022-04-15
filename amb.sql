@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 15/04/2022 07:09:13
+ Date: 15/04/2022 21:51:52
 */
 
 SET NAMES utf8mb4;
@@ -51,7 +51,7 @@ CREATE TABLE `berkas`  (
   `file_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `type` tinyint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of berkas
@@ -96,6 +96,20 @@ INSERT INTO `berkas` VALUES (37, 19, NULL, NULL, '164998129319.mp3', 1);
 INSERT INTO `berkas` VALUES (38, 19, NULL, NULL, '164998129319.jpg', 2);
 INSERT INTO `berkas` VALUES (39, 20, NULL, NULL, '164998131220.mp3', 1);
 INSERT INTO `berkas` VALUES (40, 20, NULL, NULL, '164998131220.png', 2);
+INSERT INTO `berkas` VALUES (41, NULL, 1, NULL, '16500299601.mpeg', 1);
+INSERT INTO `berkas` VALUES (42, NULL, 1, NULL, '16500299651A.mpeg', 1);
+INSERT INTO `berkas` VALUES (43, NULL, 2, NULL, '16500300722.mpeg', 1);
+INSERT INTO `berkas` VALUES (44, NULL, 2, NULL, '16500300872A.mpeg', 1);
+INSERT INTO `berkas` VALUES (45, NULL, 3, NULL, '16500301133.mpeg', 1);
+INSERT INTO `berkas` VALUES (46, NULL, 3, NULL, '16500301183A.mpeg', 1);
+INSERT INTO `berkas` VALUES (47, NULL, 4, NULL, '16500301254.mpeg', 1);
+INSERT INTO `berkas` VALUES (48, NULL, 4, NULL, '16500301314A.mpeg', 1);
+INSERT INTO `berkas` VALUES (49, NULL, 5, NULL, '16500301385.mpeg', 1);
+INSERT INTO `berkas` VALUES (50, NULL, 5, NULL, '16500301435A.mpeg', 1);
+INSERT INTO `berkas` VALUES (51, NULL, 6, NULL, '16500301506.mpeg', 1);
+INSERT INTO `berkas` VALUES (52, NULL, 6, NULL, '16500301556A.mpeg', 1);
+INSERT INTO `berkas` VALUES (53, NULL, 7, NULL, '16500301647.mpeg', 1);
+INSERT INTO `berkas` VALUES (54, NULL, 7, NULL, '16500301697A.mpeg', 1);
 
 -- ----------------------------
 -- Table structure for jawaban
@@ -106,7 +120,7 @@ CREATE TABLE `jawaban`  (
   `tadrib_id` smallint NULL DEFAULT NULL,
   `jawaban` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of jawaban
@@ -125,7 +139,7 @@ CREATE TABLE `mufrodat`  (
   `bab` bigint NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of mufrodat
@@ -157,15 +171,21 @@ INSERT INTO `mufrodat` VALUES (20, 5, 'قَاضِيْ');
 DROP TABLE IF EXISTS `muhadasa`;
 CREATE TABLE `muhadasa`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `soal` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `soal` tinyint NULL DEFAULT NULL,
   `bab` tinyint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 23 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of muhadasa
 -- ----------------------------
-INSERT INTO `muhadasa` VALUES (1, '1', 5);
+INSERT INTO `muhadasa` VALUES (1, 1, 5);
+INSERT INTO `muhadasa` VALUES (2, 2, 5);
+INSERT INTO `muhadasa` VALUES (3, 3, 5);
+INSERT INTO `muhadasa` VALUES (4, 4, 5);
+INSERT INTO `muhadasa` VALUES (5, 5, 5);
+INSERT INTO `muhadasa` VALUES (6, 6, 5);
+INSERT INTO `muhadasa` VALUES (7, 7, 5);
 
 -- ----------------------------
 -- Table structure for tadrib
@@ -176,7 +196,7 @@ CREATE TABLE `tadrib`  (
   `bab` tinyint NULL DEFAULT NULL,
   `nomor_soal` tinyint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tadrib

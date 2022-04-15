@@ -9,7 +9,7 @@ class Muhadasa extends Model
 {
     use HasFactory;
     protected $table = 'muhadasa';
-
+    protected $fillable = ['soal','bab'];
     public $timestamps = false;
 
     public function berkas()

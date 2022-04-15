@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\MufrodatController;
+use App\Http\Controllers\MuhadasaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,6 +16,6 @@ Route::get('/maharotul-istima', function () {
 Route::get('/bab-{id}', function ($id) {
     return view('bab', ['id' => $id]);
 });
-Route::get('/bab-{id}/mufrodat', function () {
-    return view('mufrodat');
-});
+Route::get('/bab-{id}/mufrodat', [MufrodatController::class, 'viewMufrodat']);
+Route::get('/bab-{id}/mufrodat/{mufrodat}', [MufrodatController::class, 'viewMufrodatbyID']);
+Route::get('/bab-{id}/muhadasa', [MuhadasaController::class, 'viewMuhadasa']);

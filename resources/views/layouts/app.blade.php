@@ -59,7 +59,7 @@
                         <div class="d-flex">
                             <ul class="navbar-nav">
                                 <li class="nav-item hidden-on-mobile">
-                                    <a class="nav-link" href="#">Pengaturan Soal</a>
+                                    {{-- <a class="nav-link" href="#">Pengaturan Soal</a> --}}
                                 </li>
                                 <li class="nav-item dropdown hidden-on-mobile">
                                     <a class="nav-link dropdown-toggle" href="#" id="addDropdownLink" role="button"

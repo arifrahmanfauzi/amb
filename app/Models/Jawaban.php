@@ -10,6 +10,7 @@ class Jawaban extends Model
     use HasFactory;
 
     protected $table = 'jawaban';
+    protected $fillable = ['tadrib_id','jawaban'];
 
     public $timestamps = false;
 }

@@ -30,7 +30,7 @@
                                                 </button>
                                             </span>
                                         </a>
-                                        <a href="soal.html"
+                                        <a href="{{ url('/bab-' . $id .'/muhadasa') }}"
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">
