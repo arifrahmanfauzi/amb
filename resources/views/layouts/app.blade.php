@@ -59,15 +59,21 @@
                         <div class="d-flex">
                             <ul class="navbar-nav">
                                 <li class="nav-item hidden-on-mobile">
-                                    {{-- <a class="nav-link" href="#">Pengaturan Soal</a> --}}
                                 </li>
                                 <li class="nav-item dropdown hidden-on-mobile">
                                     <a class="nav-link dropdown-toggle" href="#" id="addDropdownLink" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span class="user-info-text"><strong>Fulan</strong><br></span>
+                                        <span class="user-info-text"><strong>
+                                        {{ Auth::user()->username ? Auth::user()->username : "kosong" }}
+                                        </strong><br></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="addDropdownLink">
-                                        <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                        <li>
+                                            <form action="{{ url('/logout') }}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="dropdown-item">Log Out</button>
+                                            </form>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>

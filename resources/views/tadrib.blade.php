@@ -56,10 +56,35 @@
                                     </div>
 
                                     <div class="list-group" style="">
+                                        @foreach ($tadrib->jawaban as $jawaban)
                                         <li class="list-group-item">
-                                            <h1 class="float-end">أ. طَبِيْبٌ</h1>
+                                            <h1 class="float-end">
+                                                @switch($loop->iteration)
+                                                @case(1)
+                                                    أ
+                                                    @break
+
+                                                @case(2)
+                                                     ب
+                                                    @break
+
+                                                @case(3)
+                                                    ج
+                                                    @break
+
+                                                @case(4)
+                                                    د
+                                                    @break
+                                                @default
+                                                    none
+                                            @endswitch
+                                                {{ $jawaban->jawaban }}
+
+                                            </h1>
                                         </li>
-                                        <li class="list-group-item">
+
+                                        @endforeach
+                                        {{-- <li class="list-group-item">
                                             <h1 class="float-end">ب. شُرْطِيٌ</h1>
                                         </li>
                                         <li class="list-group-item">
@@ -67,7 +92,7 @@
                                         </li>
                                         <li class="list-group-item">
                                             <h1 class="float-end">د. خَبَّارٌ</h1>
-                                        </li>
+                                        </li> --}}
                                     </div>
                                 </div>
                             </div>
