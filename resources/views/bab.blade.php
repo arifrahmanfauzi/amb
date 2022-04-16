@@ -38,7 +38,7 @@
                                                 </button>
                                             </span>
                                         </a>
-                                        <a href="tes.html"
+                                        <a href="{{ url('/bab-' . $id .'/tadrib') }}"
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">

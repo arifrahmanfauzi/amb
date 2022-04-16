@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MufrodatController;
 use App\Http\Controllers\MuhadasaController;
+use App\Http\Controllers\TadribController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,3 +20,4 @@ Route::get('/bab-{id}', function ($id) {
 Route::get('/bab-{id}/mufrodat', [MufrodatController::class, 'viewMufrodat']);
 Route::get('/bab-{id}/mufrodat/{mufrodat}', [MufrodatController::class, 'viewMufrodatbyID']);
 Route::get('/bab-{id}/muhadasa', [MuhadasaController::class, 'viewMuhadasa']);
+Route::get('/bab-{id}/tadrib', [TadribController::class, 'viewTadrib']);

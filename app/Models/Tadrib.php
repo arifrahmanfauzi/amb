@@ -12,7 +12,7 @@ class Tadrib extends Model
     protected $table = 'tadrib';
 
     public $timestamps = false;
-
+    protected $fillable = ['nomor_soal','bab'];
     public function jawaban()
     {
         return $this->hasMany(Jawaban::class, 'tadrib_id', 'id');
