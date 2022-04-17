@@ -39,7 +39,7 @@
             <a href="https://www.vecteezy.com/free-vector/muslim"></a>
         </div>
         <div class="app-auth-container">
-            <form action="{{ url('login') }}" method="POST">
+            <form action="{{ env('APP_URL') }}/login" method="POST">
                 @csrf
                 <div class="auth-credentials m-b-xxl">
                     <label for="username" class="form-label">Username</label>
