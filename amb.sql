@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 18/04/2022 21:33:36
+ Date: 19/04/2022 22:20:53
 */
 
 SET NAMES utf8mb4;
@@ -124,6 +124,9 @@ INSERT INTO `berkas` VALUES (65, NULL, NULL, 11, '165006735411.mp3', 1);
 INSERT INTO `berkas` VALUES (66, NULL, NULL, 12, '165006740912.mp3', 1);
 INSERT INTO `berkas` VALUES (67, NULL, NULL, 13, '165006769513.mp3', 1);
 INSERT INTO `berkas` VALUES (68, NULL, NULL, 14, '165006773414.mp3', 1);
+INSERT INTO `berkas` VALUES (69, NULL, NULL, 8, '16500670621.mp3', 1);
+INSERT INTO `berkas` VALUES (70, NULL, NULL, 9, '16500670621.mp3', 1);
+INSERT INTO `berkas` VALUES (71, NULL, NULL, 10, '16500670621.mp3', 1);
 
 -- ----------------------------
 -- Table structure for jawaban
