@@ -46,6 +46,10 @@
                                             <div class="card-body">
                                                 <div class="widget-info-container">
                                                     <div class="widget-info-image" style="background: url({{ url('/') }}/storage/tadrib/{{ $tadrib->berkas[0]['file_name'] }})"></div>
+                                                    <audio controls>
+                                                        <source src="{{ url('/') }}/storage/tadrib/{{ $tadrib->berkas[1]['file_name'] }}"
+                                                            type="audio/mpeg">
+                                                    </audio>
                                                 </div>
                                             </div>
                                         </div>
@@ -84,15 +88,6 @@
                                         </li>
 
                                         @endforeach
-                                        {{-- <li class="list-group-item">
-                                            <h1 class="float-end">ب. شُرْطِيٌ</h1>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <h1 class="float-end">ج. حَدَّادٌ</h1>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <h1 class="float-end">د. خَبَّارٌ</h1>
-                                        </li> --}}
                                     </div>
                                 </div>
                             </div>
