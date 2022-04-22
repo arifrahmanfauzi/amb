@@ -32,11 +32,11 @@
                                     <div class="alert alert-custom" role="alert">
                                         @if ($tadrib->berkas[0]['type'] == 1)
                                         <div class="custom-alert-icon icon-primary"><img
-                                                src="{{ url('/') }}/assets/images/other/man.png" alt="" srcset=""></div>
+                                                src="{{ env('APP_URL') }}/assets/images/other/man.png" alt="" srcset=""></div>
                                         <div class="alert-content d-flex">
                                             <div class="col-xl-5">
                                                 <audio controls>
-                                                    <source src="{{ url('/') }}/storage/tadrib/{{ $tadrib->berkas[0]['file_name'] }}"
+                                                    <source src="{{ env('APP_URL') }}/storage/tadrib/{{ $tadrib->berkas[0]['file_name'] }}"
                                                         type="audio/mpeg">
                                                 </audio>
                                             </div>
@@ -45,9 +45,9 @@
                                         <div class="card widget widget-info">
                                             <div class="card-body">
                                                 <div class="widget-info-container">
-                                                    <div class="widget-info-image" style="background: url({{ url('/') }}/storage/tadrib/{{ $tadrib->berkas[0]['file_name'] }})"></div>
+                                                    <div class="widget-info-image" style="background: url({{ env('APP_URL') }}/storage/tadrib/{{ $tadrib->berkas[0]['file_name'] }})"></div>
                                                     <audio controls>
-                                                        <source src="{{ url('/') }}/storage/tadrib/{{ $tadrib->berkas[1]['file_name'] }}"
+                                                        <source src="{{ env('APP_URL') }}/storage/tadrib/{{ $tadrib->berkas[1]['file_name'] }}"
                                                             type="audio/mpeg">
                                                     </audio>
                                                 </div>
