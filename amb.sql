@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 19/04/2022 22:20:53
+ Date: 22/04/2022 22:35:49
 */
 
 SET NAMES utf8mb4;
@@ -51,7 +51,7 @@ CREATE TABLE `berkas`  (
   `file_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `type` tinyint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 68 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 120 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of berkas
@@ -127,6 +127,71 @@ INSERT INTO `berkas` VALUES (68, NULL, NULL, 14, '165006773414.mp3', 1);
 INSERT INTO `berkas` VALUES (69, NULL, NULL, 8, '16500670621.mp3', 1);
 INSERT INTO `berkas` VALUES (70, NULL, NULL, 9, '16500670621.mp3', 1);
 INSERT INTO `berkas` VALUES (71, NULL, NULL, 10, '16500670621.mp3', 1);
+INSERT INTO `berkas` VALUES (72, 21, NULL, NULL, '16505980341.mp3', 1);
+INSERT INTO `berkas` VALUES (73, 21, NULL, NULL, '16505980351.jpg', 2);
+INSERT INTO `berkas` VALUES (74, 22, NULL, NULL, '16505980612.mp3', 1);
+INSERT INTO `berkas` VALUES (75, 22, NULL, NULL, '16505980612.png', 2);
+INSERT INTO `berkas` VALUES (76, 23, NULL, NULL, '16505983983.mp3', 1);
+INSERT INTO `berkas` VALUES (77, 23, NULL, NULL, '16505983983.jpg', 2);
+INSERT INTO `berkas` VALUES (78, 24, NULL, NULL, '16505985604.mp3', 1);
+INSERT INTO `berkas` VALUES (79, 24, NULL, NULL, '16505985604.jpg', 2);
+INSERT INTO `berkas` VALUES (80, 25, NULL, NULL, '16505985885.mp3', 1);
+INSERT INTO `berkas` VALUES (81, 25, NULL, NULL, '16505985885.png', 2);
+INSERT INTO `berkas` VALUES (82, 26, NULL, NULL, '16505986146.mp3', 1);
+INSERT INTO `berkas` VALUES (83, 26, NULL, NULL, '16505986146.png', 2);
+INSERT INTO `berkas` VALUES (84, 27, NULL, NULL, '16505986417.mp3', 1);
+INSERT INTO `berkas` VALUES (85, 27, NULL, NULL, '16505986417.png', 2);
+INSERT INTO `berkas` VALUES (86, 28, NULL, NULL, '16505986598.mp3', 1);
+INSERT INTO `berkas` VALUES (87, 28, NULL, NULL, '16505986598.png', 2);
+INSERT INTO `berkas` VALUES (88, 29, NULL, NULL, '16505986979.mp3', 1);
+INSERT INTO `berkas` VALUES (89, 29, NULL, NULL, '16505986979.jpg', 2);
+INSERT INTO `berkas` VALUES (90, 30, NULL, NULL, '165059872910.mp3', 1);
+INSERT INTO `berkas` VALUES (91, 30, NULL, NULL, '165059872910.jpg', 2);
+INSERT INTO `berkas` VALUES (92, 31, NULL, NULL, '165059877111.mp3', 1);
+INSERT INTO `berkas` VALUES (93, 31, NULL, NULL, '165059877111.png', 2);
+INSERT INTO `berkas` VALUES (94, 32, NULL, NULL, '165059879712.mp3', 1);
+INSERT INTO `berkas` VALUES (95, 32, NULL, NULL, '165059879712.jpg', 2);
+INSERT INTO `berkas` VALUES (96, 33, NULL, NULL, '165059881313.mp3', 1);
+INSERT INTO `berkas` VALUES (97, 33, NULL, NULL, '165059881313.jpg', 2);
+INSERT INTO `berkas` VALUES (98, 34, NULL, NULL, '165059883314.mp3', 1);
+INSERT INTO `berkas` VALUES (99, 34, NULL, NULL, '165059883314.png', 2);
+INSERT INTO `berkas` VALUES (100, 35, NULL, NULL, '165059885415.mp3', 1);
+INSERT INTO `berkas` VALUES (101, 35, NULL, NULL, '165059885415.jpg', 2);
+INSERT INTO `berkas` VALUES (102, 36, NULL, NULL, '165059892916.mp3', 1);
+INSERT INTO `berkas` VALUES (103, 36, NULL, NULL, '165059892916.png', 2);
+INSERT INTO `berkas` VALUES (104, NULL, 8, NULL, '16506354991.mpeg', 1);
+INSERT INTO `berkas` VALUES (105, NULL, 8, NULL, '16506355141A.mpeg', 1);
+INSERT INTO `berkas` VALUES (106, NULL, 9, NULL, '16506355222.mpeg', 1);
+INSERT INTO `berkas` VALUES (107, NULL, 9, NULL, '16506355272A.mpeg', 1);
+INSERT INTO `berkas` VALUES (108, NULL, 10, NULL, '16506355343.mpeg', 1);
+INSERT INTO `berkas` VALUES (109, NULL, 10, NULL, '16506355383A.mpeg', 1);
+INSERT INTO `berkas` VALUES (110, NULL, 11, NULL, '16506355464.mpeg', 1);
+INSERT INTO `berkas` VALUES (111, NULL, 11, NULL, '16506355524A.mpeg', 1);
+INSERT INTO `berkas` VALUES (112, NULL, 12, NULL, '16506355615.mpeg', 1);
+INSERT INTO `berkas` VALUES (113, NULL, 12, NULL, '16506355655A.mpeg', 1);
+INSERT INTO `berkas` VALUES (114, NULL, 13, NULL, '16506355736.mpeg', 1);
+INSERT INTO `berkas` VALUES (115, NULL, 13, NULL, '16506355786A.mpeg', 1);
+INSERT INTO `berkas` VALUES (116, NULL, 14, NULL, '16506355847.mpeg', 1);
+INSERT INTO `berkas` VALUES (117, NULL, 14, NULL, '16506355877A.mpeg', 1);
+INSERT INTO `berkas` VALUES (118, NULL, 15, NULL, '16506355948.mpeg', 1);
+INSERT INTO `berkas` VALUES (119, NULL, 15, NULL, '16506355988A.mpeg', 1);
+INSERT INTO `berkas` VALUES (120, NULL, NULL, 15, '16506390651.mp3', 1);
+INSERT INTO `berkas` VALUES (121, NULL, NULL, 16, '16506391022.mp3', 1);
+INSERT INTO `berkas` VALUES (122, NULL, NULL, 17, '16506391333.mp3', 1);
+INSERT INTO `berkas` VALUES (123, NULL, NULL, 18, '16506391714.mp3', 1);
+INSERT INTO `berkas` VALUES (124, NULL, NULL, 19, '16506395805.mp3', 1);
+INSERT INTO `berkas` VALUES (125, NULL, NULL, 20, '16506396236.mp3', 1);
+INSERT INTO `berkas` VALUES (126, NULL, NULL, 21, '16506401567.mp3', 1);
+INSERT INTO `berkas` VALUES (127, NULL, NULL, 22, '16506401918.mp3', 1);
+INSERT INTO `berkas` VALUES (128, NULL, NULL, 23, '16506402469.mp3', 1);
+INSERT INTO `berkas` VALUES (129, NULL, NULL, 24, '165064028810.mp3', 1);
+INSERT INTO `berkas` VALUES (130, NULL, NULL, 25, '165064032411.mp3', 1);
+INSERT INTO `berkas` VALUES (131, NULL, NULL, 26, '16506404175.png', 2);
+INSERT INTO `berkas` VALUES (132, NULL, NULL, 26, '16506404214.mpeg', 1);
+INSERT INTO `berkas` VALUES (133, NULL, NULL, 27, '16506407149.jpg', 2);
+INSERT INTO `berkas` VALUES (134, NULL, NULL, 27, '16506404214.mpeg', 1);
+INSERT INTO `berkas` VALUES (135, NULL, NULL, 28, '16506408098.png', 2);
+INSERT INTO `berkas` VALUES (136, NULL, NULL, 28, '16506404214.mpeg', 1);
 
 -- ----------------------------
 -- Table structure for jawaban
@@ -137,7 +202,7 @@ CREATE TABLE `jawaban`  (
   `tadrib_id` smallint NULL DEFAULT NULL,
   `jawaban` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 56 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 57 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of jawaban
@@ -198,6 +263,62 @@ INSERT INTO `jawaban` VALUES (53, 14, 'عَامِلُ القَمَ');
 INSERT INTO `jawaban` VALUES (54, 14, 'مُعَلِّمَةٌ');
 INSERT INTO `jawaban` VALUES (55, 14, 'سَبَّاكٌ');
 INSERT INTO `jawaban` VALUES (56, 14, 'مُمَرِّضَةٌ');
+INSERT INTO `jawaban` VALUES (57, 15, 'فَقْرُ الدَّمُ');
+INSERT INTO `jawaban` VALUES (58, 15, 'حَمَّى وَ صُدَاعٌ');
+INSERT INTO `jawaban` VALUES (59, 15, 'سُرْعَةُ التَّعْبِ');
+INSERT INTO `jawaban` VALUES (60, 15, 'زُكَامٌ');
+INSERT INTO `jawaban` VALUES (61, 16, 'يَذْهَبُ عَلِى إِلىَ المُسْتَشْفَى');
+INSERT INTO `jawaban` VALUES (62, 16, 'يَذْهَبُ عَلِى إِلىَ الصَّيْدَالِيَةْ');
+INSERT INTO `jawaban` VALUES (63, 16, 'يَذْهَبُ عَلِى إِلىَ المَطْبَحِ');
+INSERT INTO `jawaban` VALUES (64, 16, 'يَذْهَبُ عَلِى إِلىَ المَدْرَسَةِ');
+INSERT INTO `jawaban` VALUES (65, 17, 'فَاطِمَةْ');
+INSERT INTO `jawaban` VALUES (66, 17, 'زَيْنَبْ');
+INSERT INTO `jawaban` VALUES (67, 17, 'عَلِى');
+INSERT INTO `jawaban` VALUES (68, 17, 'عُمَرْ');
+INSERT INTO `jawaban` VALUES (69, 18, 'نَعَمْ، شَرَبَتْ زَيْنَبْ الماَءْ');
+INSERT INTO `jawaban` VALUES (70, 18, 'لا، وَلَكِنْ شَرَبَتْ زَيْنَبْ الماَءُ');
+INSERT INTO `jawaban` VALUES (71, 18, 'نَعَمْ، شَرَبَتْ زَيْنَبْ الدَّوَاءْ');
+INSERT INTO `jawaban` VALUES (72, 18, 'لَا، وَلَكِنْ شَرَبَتْ زَيْنَبْ الشاَيِ');
+INSERT INTO `jawaban` VALUES (73, 19, 'تَشْعُرُ فَاطِمَةْ حَمَّى وَ صُدَاعٌ');
+INSERT INTO `jawaban` VALUES (74, 19, 'تَشْعُرُ فَاطِمَةْ سُرْعَةُ التَّعْبِ');
+INSERT INTO `jawaban` VALUES (75, 19, 'تَشْعُرُ فَاطِمَةْ زُكَامٌ');
+INSERT INTO `jawaban` VALUES (76, 19, 'تَشْعُرُ فَاطِمَةْ صِحَّةِ وَ عَافِيَةْ');
+INSERT INTO `jawaban` VALUES (77, 20, 'شُكراً');
+INSERT INTO `jawaban` VALUES (78, 20, 'عَفْوًا');
+INSERT INTO `jawaban` VALUES (79, 20, 'لاَ');
+INSERT INTO `jawaban` VALUES (80, 20, 'نَعَمْ');
+INSERT INTO `jawaban` VALUES (81, 21, 'إنشاء اللّٰ');
+INSERT INTO `jawaban` VALUES (82, 21, 'شفاكَ اللّٰه');
+INSERT INTO `jawaban` VALUES (83, 21, 'شفاء عاجلا');
+INSERT INTO `jawaban` VALUES (84, 21, 'شكرا كثيرا');
+INSERT INTO `jawaban` VALUES (85, 22, 'صُدَاعٌ');
+INSERT INTO `jawaban` VALUES (86, 22, 'حُمَّى');
+INSERT INTO `jawaban` VALUES (87, 22, 'فَقْرُ الدَّمِ');
+INSERT INTO `jawaban` VALUES (88, 22, 'سُرْعَةُ التَّعْبِ');
+INSERT INTO `jawaban` VALUES (89, 23, 'صُدَاعٌ');
+INSERT INTO `jawaban` VALUES (90, 23, 'فَقْرُ الدَّمِ');
+INSERT INTO `jawaban` VALUES (91, 23, 'حُمَّى');
+INSERT INTO `jawaban` VALUES (92, 23, 'سُرْعَةُ التَّعْبِ');
+INSERT INTO `jawaban` VALUES (93, 24, 'صُدَاعٌ');
+INSERT INTO `jawaban` VALUES (94, 24, 'ُمَّى');
+INSERT INTO `jawaban` VALUES (95, 24, 'سُرْعَةُ التَّعْبِ');
+INSERT INTO `jawaban` VALUES (96, 24, 'فَقْرُ الدَّمِ');
+INSERT INTO `jawaban` VALUES (97, 25, 'صُدَاعٌ');
+INSERT INTO `jawaban` VALUES (98, 25, 'حُمَّى');
+INSERT INTO `jawaban` VALUES (99, 25, 'مَرِيْضٌ');
+INSERT INTO `jawaban` VALUES (100, 25, 'سُرْعَةُ التَّعْبِ');
+INSERT INTO `jawaban` VALUES (101, 26, 'تِلْكَ المُسْتَشْفَى');
+INSERT INTO `jawaban` VALUES (102, 26, 'تِلْكَ البَيْتٌ');
+INSERT INTO `jawaban` VALUES (103, 26, 'تِلْكَ الصَّيْدَلِيَةُ');
+INSERT INTO `jawaban` VALUES (104, 26, 'تِلْكَ فُنْدُوْقٌ');
+INSERT INTO `jawaban` VALUES (105, 27, 'تِلْكَ المُسْتَشْفَى');
+INSERT INTO `jawaban` VALUES (106, 27, 'تِلْكَ البَيْتٌ');
+INSERT INTO `jawaban` VALUES (107, 27, 'تِلْكَ الصَّيْدَلِيَةُ');
+INSERT INTO `jawaban` VALUES (108, 27, 'تِلْكَ فُنْدُوْقٌ');
+INSERT INTO `jawaban` VALUES (109, 28, 'هَذَا الدَّمُ');
+INSERT INTO `jawaban` VALUES (110, 28, 'هَذَا مَرِيْضٌ');
+INSERT INTO `jawaban` VALUES (111, 28, 'هَذَا الدَّوَاءُ');
+INSERT INTO `jawaban` VALUES (112, 28, 'هَذَا الْوَصْفَةُ');
 
 -- ----------------------------
 -- Table structure for mufrodat
@@ -208,7 +329,7 @@ CREATE TABLE `mufrodat`  (
   `bab` bigint NULL DEFAULT NULL,
   `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of mufrodat
@@ -233,6 +354,22 @@ INSERT INTO `mufrodat` VALUES (17, 5, 'عَامِلُ القَمَامَةِ');
 INSERT INTO `mufrodat` VALUES (18, 5, 'سَائِقُ الحَافِلَةِ');
 INSERT INTO `mufrodat` VALUES (19, 5, 'صَحَفِيْ');
 INSERT INTO `mufrodat` VALUES (20, 5, 'قَاضِيْ');
+INSERT INTO `mufrodat` VALUES (21, 6, 'صُدَاعٌ');
+INSERT INTO `mufrodat` VALUES (22, 6, 'حُمَّى');
+INSERT INTO `mufrodat` VALUES (23, 6, 'زُكاَمٌ');
+INSERT INTO `mufrodat` VALUES (24, 6, 'عِيَادَةُ الْمَرْضَى');
+INSERT INTO `mufrodat` VALUES (25, 6, 'المُسْتَشْفَى');
+INSERT INTO `mufrodat` VALUES (26, 6, 'مَرِيْضٌ');
+INSERT INTO `mufrodat` VALUES (27, 6, 'الْوَصْفَةُ');
+INSERT INTO `mufrodat` VALUES (28, 6, 'الدَّوَاءُ');
+INSERT INTO `mufrodat` VALUES (29, 6, 'الصَّيْدَلِيَةُ');
+INSERT INTO `mufrodat` VALUES (30, 6, 'شَفَى-يَشْفِي');
+INSERT INTO `mufrodat` VALUES (31, 6, 'نَحِيْفٌ');
+INSERT INTO `mufrodat` VALUES (32, 6, 'سَرَطَانٌ');
+INSERT INTO `mufrodat` VALUES (33, 6, 'خَطِيْرٌ');
+INSERT INTO `mufrodat` VALUES (34, 6, 'فَقْرُ الدَّمِ');
+INSERT INTO `mufrodat` VALUES (35, 6, 'الدَّمُ');
+INSERT INTO `mufrodat` VALUES (36, 6, 'سُرْعَةُ التَّعْبِ');
 
 -- ----------------------------
 -- Table structure for muhadasa
@@ -243,7 +380,7 @@ CREATE TABLE `muhadasa`  (
   `soal` tinyint NULL DEFAULT NULL,
   `bab` tinyint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 16 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of muhadasa
@@ -255,6 +392,14 @@ INSERT INTO `muhadasa` VALUES (4, 4, 5);
 INSERT INTO `muhadasa` VALUES (5, 5, 5);
 INSERT INTO `muhadasa` VALUES (6, 6, 5);
 INSERT INTO `muhadasa` VALUES (7, 7, 5);
+INSERT INTO `muhadasa` VALUES (8, 1, 6);
+INSERT INTO `muhadasa` VALUES (9, 2, 6);
+INSERT INTO `muhadasa` VALUES (10, 3, 6);
+INSERT INTO `muhadasa` VALUES (11, 4, 6);
+INSERT INTO `muhadasa` VALUES (12, 5, 6);
+INSERT INTO `muhadasa` VALUES (13, 6, 6);
+INSERT INTO `muhadasa` VALUES (14, 7, 6);
+INSERT INTO `muhadasa` VALUES (15, 8, 6);
 
 -- ----------------------------
 -- Table structure for tadrib
@@ -265,7 +410,7 @@ CREATE TABLE `tadrib`  (
   `bab` tinyint NULL DEFAULT NULL,
   `nomor_soal` tinyint NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tadrib
@@ -284,6 +429,20 @@ INSERT INTO `tadrib` VALUES (11, 5, 11);
 INSERT INTO `tadrib` VALUES (12, 5, 12);
 INSERT INTO `tadrib` VALUES (13, 5, 13);
 INSERT INTO `tadrib` VALUES (14, 5, 14);
+INSERT INTO `tadrib` VALUES (15, 6, 1);
+INSERT INTO `tadrib` VALUES (16, 6, 2);
+INSERT INTO `tadrib` VALUES (17, 6, 3);
+INSERT INTO `tadrib` VALUES (18, 6, 4);
+INSERT INTO `tadrib` VALUES (19, 6, 5);
+INSERT INTO `tadrib` VALUES (20, 6, 6);
+INSERT INTO `tadrib` VALUES (21, 6, 7);
+INSERT INTO `tadrib` VALUES (22, 6, 8);
+INSERT INTO `tadrib` VALUES (23, 6, 9);
+INSERT INTO `tadrib` VALUES (24, 6, 10);
+INSERT INTO `tadrib` VALUES (25, 6, 11);
+INSERT INTO `tadrib` VALUES (26, 6, 12);
+INSERT INTO `tadrib` VALUES (27, 6, 13);
+INSERT INTO `tadrib` VALUES (28, 6, 14);
 
 -- ----------------------------
 -- Table structure for users
@@ -296,7 +455,7 @@ CREATE TABLE `users`  (
   `created_at` datetime NULL DEFAULT NULL,
   `updated_at` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
