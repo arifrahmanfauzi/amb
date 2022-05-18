@@ -50,6 +50,39 @@ class MuhadasaController extends Controller
         return "success";
     }
 
+    public function update(Request $request, $bab, $id)
+    {
+        try {
+            $request->validate([
+                'file_audio' => 'required|mimes:application/octet-stream,audio/mpeg,mpga,mp3,wav',
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json($th->getMessage(), 422);
+        }
+        // save file audio
+        $uploadFileAudio = $request->file('file_audio');
+        $filenameAudio = time().$uploadFileAudio->getClientOriginalName();
+        Storage::disk('public')->putFileAs(
+            'muhadasa/',
+            $uploadFileAudio,
+            $filenameAudio
+        );
+
+        $muhadasa = Muhadasa::firstOrCreate(
+            ['soal' => $request->soal, 'bab' => $id],
+            ['soal' => $request->soal, 'bab' => $id]
+        );
+
+        //save file to berkas database
+        $berkasAudio = new Berkas();
+        $berkasAudio->muhadasa_id = $muhadasa->getKey();
+        $berkasAudio->file_name = $filenameAudio;
+        $berkasAudio->type = 1;
+        $berkasAudio->save();
+
+        return "success";
+    }
+
     public function viewMuhadasa($id)
     {
         $bab = new Muhadasa();

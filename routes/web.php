@@ -20,14 +20,24 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/beranda', function () {
         return view('beranda');
     });
-    Route::get('/maharotul-istima', function () {
+    Route::get('/silabus', function () {
         return view('maharotul-istima');
     });
     Route::get('/bab-{id}', function ($id) {
         return view('bab', ['id' => $id]);
     });
-    Route::get('/bab-{id}/mufrodat', [MufrodatController::class, 'viewMufrodat']);
-    Route::get('/bab-{id}/mufrodat/{mufrodat}', [MufrodatController::class, 'viewMufrodatbyID']);
+    // Route::get('/bab-{id}/istima', [MufrodatController::class, 'viewMufrodat']);
+    Route::get('/bab-{id}/istima', function ($id) {
+        return view('istima', ['id' => $id]);
+    });
+
+    Route::get('/bab-{id}/istima/mutaradifat', [MufrodatController::class, 'viewMufrodat']);
+    Route::get('/bab-{id}/istima/mutaradifat/{mufrodat}', [MufrodatController::class, 'viewMufrodatbyID']);
+    Route::get('/bab-{bab}/istima/qasirah', [MufrodatController::class, 'viewQasirah']);
+
+    Route::get('/bab-{id}/kalam/{mufrodat}', [MufrodatController::class, 'viewMufrodatbyID']);
+    Route::get('/bab-{id}/kalam/khiwar', [MufrodatController::class, '']);
+    Route::get('/bab-{id}/kalam/khisah', [MufrodatController::class, 'viewMufrodatbyID']);
+    Route::get('/bab-{id}/tamrin', [TadribController::class, 'viewTadrib']);
     Route::get('/bab-{id}/muhadasa', [MuhadasaController::class, 'viewMuhadasa']);
-    Route::get('/bab-{id}/tadrib', [TadribController::class, 'viewTadrib']);
 });

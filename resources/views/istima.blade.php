@@ -1,18 +1,18 @@
 @extends('layouts.app')
 @section('tittle')
-        <title>Maharotul Istima'</title>
+        <title>Bab {{ $id }}</title>
 @endsection
 @section('app-content')
 <div class="app-content">
     <div class="content-wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-6 card">
+                <div class="col-xl-6 card justify-content-center">
                     <div
                         class="d-flex flex-column align-items-center justify-content-center align-content-center p-2 gap-3">
-                        <img src="assets/images/other/UINSA.png" alt="" class="rounded float-end"
+                        <img src="{{ url("assets/images/other/logo.png") }}" alt="" class="rounded float-end"
                             width="100" height="100">
-                        <img src="assets/images/other/logo.png" alt="" class="rounded float-start"
+                        <img src="{{ url("assets/images/other/UINSA.png") }}" alt="" class="rounded float-start"
                             width="100" height="100">
                     </div>
                 </div>
@@ -22,35 +22,21 @@
                             <div class="widget-action-list-container">
                                 <ul class="list-unstyled d-flex no-m">
                                     <li class="widget-action-list-item">
-                                        <a href="{{ url('/bab-4') }}"
+                                        <a href="{{ url('/bab-' . $id .'/istima/mutaradifat') }}"
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">
-                                                    <h1> البَابُ الرابع</h1>
+                                                    {{-- <h1> المُتَرَادِفَاتْ</h1> --}}
+                                                    <h1> المترادفات </h1>
                                                 </button>
                                             </span>
                                         </a>
-                                        <a href="{{ url('/bab-5') }}"
+                                        <a href="{{ url('/bab-' . $id .'/istima/qasirah') }}"
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">
-                                                    <h1> البَابُ الخَامِسْ</h1>
-                                                </button>
-                                            </span>
-                                        </a>
-                                        <a href="{{ url('/bab-6') }}"
-                                            class="text-center d-flex flex-column align-items-center">
-                                            <span class="widget-action-list-item-title">
-                                                <button class="btn btn-outline-dark btn-lg">
-                                                    <h1> البَابُ السَّادِسْ </h1>
-                                                </button>
-                                            </span>
-                                        </a>
-                                        <a href="{{ url('/uas') }}"
-                                            class="text-center d-flex flex-column align-items-center">
-                                            <span class="widget-action-list-item-title">
-                                                <button class="btn btn-outline-dark btn-lg">
-                                                    <h1> UAS </h1>
+                                                    {{-- <h1> مُحَادَثَة </h1> --}}
+                                                    <h1> جملة قصيرة عن عيادة المرضى </h1>
                                                 </button>
                                             </span>
                                         </a>

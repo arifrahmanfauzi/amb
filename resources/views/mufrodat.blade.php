@@ -21,13 +21,12 @@
             </div>
 
             <div class="row">
-
                 @forelse ($data as $mufrodat)
                 <div class="col-xl-4">
                     <div class="card file-manager-group">
                         <div class="card-body d-flex align-items-center">
                             <div class="card-body d-flex align-items-center">
-                                <a href="{{ url('/bab-').$id }}/mufrodat/{{ $mufrodat->id }}">
+                                <a href="{{ url('/bab-').$id }}/istima/mutaradifat/{{ $mufrodat->id }}">
                                     <img src="{{ url('/') }}/storage/mufrodat/{{ $mufrodat->berkas[1]->file_name }}" alt="" class="rounded"
                                         width="300" height="300">
                                 </a>
@@ -43,7 +42,21 @@
                         <div class="alert-content">
                             <div class="example">
                                 <audio controls="">
-                                    <source src="{{ url('/') }}/storage/mufrodat/mufrodat.mpeg" type="audio/mpeg">
+                                    @switch($id)
+                                        @case(4)
+
+                                            @break
+                                        @case(5)
+                                        <source src="{{ url('/') }}/storage/mufrodat/mufrodat.mpeg" type="audio/mpeg">
+                                            @break
+                                        @case(6)
+                                        <source src="{{ url('/') }}/storage/mufrodat/mufrodat-6.mpeg" type="audio/mpeg">
+
+                                            @break
+
+                                        @default
+                                            <h4>Not found</h4>
+                                    @endswitch
                                 </audio>
                             </div>
                         </div>

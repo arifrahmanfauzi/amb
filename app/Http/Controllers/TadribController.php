@@ -50,6 +50,39 @@ class TadribController extends Controller
         return "success";
     }
 
+    public function update(Request $request, $bab, $id)
+    {
+        // save file audio
+        $uploadFile = $request->file('file');
+        $filename = time().$uploadFile->getClientOriginalName();
+        Storage::disk('public')->putFileAs(
+            'tadrib/',
+            $uploadFile,
+            $filename
+        );
+
+        $tadrib = Tadrib::firstOrCreate(
+            ['nomor_soal' => $request->nomor_soal, 'bab' => $id],
+            ['nomor_soal' => $request->nomor_soal, 'bab' => $id]
+        );
+
+        //save file to berkas database
+        $berkasAudio = new Berkas();
+        $berkasAudio->tadrib_id = $tadrib->getKey();
+        $berkasAudio->file_name = $filename;
+        $berkasAudio->type = $request->type;
+        $berkasAudio->save();
+
+        DB::table('jawaban')->insert([
+            ['tadrib_id' => $tadrib->getKey(), 'jawaban' => $request->a],
+            ['tadrib_id' => $tadrib->getKey(), 'jawaban' => $request->b],
+            ['tadrib_id' => $tadrib->getKey(), 'jawaban' => $request->c],
+            ['tadrib_id' => $tadrib->getKey(), 'jawaban' => $request->d],
+        ]);
+
+        return "success";
+    }
+
     public function viewTadrib(Request $request, $id)
     {
         $bab = new Tadrib();
