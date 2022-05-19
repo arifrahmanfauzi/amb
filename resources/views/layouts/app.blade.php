@@ -57,8 +57,8 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="addDropdownLink" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         <span class="user-info-text"><strong>
-                                        {{ Auth::user()->username ? Auth::user()->username : "kosong" }}
-                                        </strong><br></span>
+                                                {{ Auth::user()->username ? Auth::user()->username : 'kosong' }}
+                                            </strong><br></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="addDropdownLink">
                                         <li>
@@ -74,7 +74,7 @@
                     </div>
                 </nav>
             </div>
-           @yield('app-content')
+            @yield('app-content')
         </div>
     </div>
 
@@ -87,6 +87,7 @@
     <script src="{{ env('APP_URL') }}/assets/plugins/highlight/highlight.pack.js"></script>
     <script src="{{ env('APP_URL') }}/assets/js/main.min.js"></script>
     <script src="{{ env('APP_URL') }}/assets/js/custom.js"></script>
+    @yield('script')
 </body>
 
 </html>
