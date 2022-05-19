@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 19/05/2022 11:19:11
+ Date: 19/05/2022 16:43:08
 */
 
 SET NAMES utf8mb4;
@@ -224,6 +224,15 @@ INSERT INTO `berkas` VALUES (162, NULL, NULL, 29, NULL, NULL, 29, '16529317353.j
 INSERT INTO `berkas` VALUES (163, NULL, NULL, 30, NULL, NULL, 30, '16529322182.mp3', 1);
 INSERT INTO `berkas` VALUES (164, NULL, NULL, 31, NULL, NULL, 31, '16529323603.mp3', 1);
 INSERT INTO `berkas` VALUES (165, NULL, NULL, 32, NULL, NULL, 32, '16529324524.mp3', 1);
+INSERT INTO `berkas` VALUES (166, NULL, NULL, NULL, NULL, NULL, 33, '16529389401.mpeg', 1);
+INSERT INTO `berkas` VALUES (167, NULL, NULL, NULL, NULL, NULL, 33, '16529389712.mpeg', 1);
+INSERT INTO `berkas` VALUES (168, NULL, NULL, NULL, NULL, NULL, 33, '16529389793.mpeg', 1);
+INSERT INTO `berkas` VALUES (169, NULL, NULL, NULL, NULL, NULL, 33, '16529389844.mpeg', 1);
+INSERT INTO `berkas` VALUES (170, NULL, NULL, NULL, NULL, NULL, 33, '16529389885.mpeg', 1);
+INSERT INTO `berkas` VALUES (171, NULL, NULL, NULL, NULL, NULL, 33, '16529389926.mpeg', 1);
+INSERT INTO `berkas` VALUES (172, NULL, NULL, NULL, NULL, NULL, 33, '16529389967.mpeg', 1);
+INSERT INTO `berkas` VALUES (173, NULL, NULL, NULL, NULL, NULL, 33, '16529390018.mpeg', 1);
+INSERT INTO `berkas` VALUES (174, NULL, NULL, NULL, NULL, NULL, 34, '6.mp4', 3);
 
 -- ----------------------------
 -- Table structure for jawaban
@@ -552,6 +561,8 @@ INSERT INTO `tamrin` VALUES (29, 6, 1);
 INSERT INTO `tamrin` VALUES (30, 6, 2);
 INSERT INTO `tamrin` VALUES (31, 6, 3);
 INSERT INTO `tamrin` VALUES (32, 6, 4);
+INSERT INTO `tamrin` VALUES (33, 6, 5);
+INSERT INTO `tamrin` VALUES (34, 6, 7);
 
 -- ----------------------------
 -- Table structure for users

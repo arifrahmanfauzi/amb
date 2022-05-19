@@ -35,4 +35,5 @@ Route::post('/bab-{bab}/kalam/qisah', [MuhadasaController::class, 'uploadQisah']
 Route::get('/bab-{bab}/kalam/qisah', [MuhadasaController::class, 'viewQisah']);
 
 Route::post('/bab-{bab}/tamrin', [TamrinController::class, 'insertTamrin']);
-Route::get('/bab-{bab}/tamrin', [TamrinController::class, 'viewTamrin']);
+Route::post('/bab-{bab}/tamrin/muhadasa', [TamrinController::class, 'createMuhadasa']);
+Route::get('/bab-{bab}/tamrin', [TamrinController::class, 'viewTamrinApi']);
