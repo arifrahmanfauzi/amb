@@ -143,7 +143,9 @@ class MufrodatController extends Controller
     }
     public function viewQasirah($bab)
     {
-        return view('qasirah', ['id' => $bab]);
+        $qasirah = new Qasirah();
+        $data = $qasirah->where('bab', $bab)->with('berkas')->get();
+        return view('qasirah', ['data' => $data,'id' => $bab]);
     }
 
     public function insertQasirah($bab, Request $request)
@@ -194,5 +196,21 @@ class MufrodatController extends Controller
         $berkasImage->save();
 
         return "success";
+    }
+
+    public function viewQasirahbyID($bab, $qasirah)
+    {
+        $qasira = new Qasirah();
+
+        $qasirah = $qasira->where('bab', $bab)->where('id', $qasirah)->with('berkas')->get();
+
+        return view('qasirahID', ['id'=>$bab, 'data'=>$qasirah]);
+    }
+    public function getAllQasirah($id)
+    {
+        $qasirah = new Qasirah();
+        $data = $qasirah->where('bab', $id)->with('berkas')->get();
+
+        return $data;
     }
 }

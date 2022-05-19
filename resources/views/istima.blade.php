@@ -7,6 +7,19 @@
     <div class="content-wrapper">
         <div class="container-fluid">
             <div class="row">
+                <div class="col">
+                    <div class="page-description d-flex align-items-center">
+                        <div class="page-description-content flex-grow-1">
+                            <button class="btn btn-primary" onclick="history.back()"><i
+                                    class="material-icons">chevron_left</i>Kembali</button>
+                        </div>
+                        {{-- <div class="page-description-actions">
+                            <h1>جملة قصيرة عن عيادة المرضى</h1>
+                        </div> --}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-xl-6 card justify-content-center">
                     <div
                         class="d-flex flex-column align-items-center justify-content-center align-content-center p-2 gap-3">

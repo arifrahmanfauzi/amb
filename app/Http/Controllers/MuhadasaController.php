@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Berkas;
 use App\Models\Muhadasa;
+use App\Models\Qisah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class MuhadasaController extends Controller
 {
-    public function muhadasa(Request $request, $id)
+    public function muhadasa($id)
     {
         $bab = new Muhadasa();
 
@@ -83,12 +84,57 @@ class MuhadasaController extends Controller
         return "success";
     }
 
+    public function getAllKhiwar($bab)
+    {
+        $bab = new Muhadasa();
+
+        $muhadasah = $bab->where('bab', $bab)->with('berkas')->get();
+        return $muhadasah;
+    }
     public function viewMuhadasa($id)
     {
         $bab = new Muhadasa();
 
         $muhadasah = $bab->where('bab', $id)->with('berkas')->get();
-
+        // return $muhadasah;
         return view('muhadasa', ['id'=>$id, 'data' => $muhadasah]);
+    }
+    public function uploadQisah(Request $request, $bab)
+    {
+        try {
+            $request->validate([
+                'file_video' => 'mimetypes:video/avi,video/mpeg,video/quicktime,video/mp4',
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json($th->getMessage(), 422);
+        }
+
+        // save file audio
+        $uploadVideo = $request->file('file_video');
+        $filenameVideo = time().$uploadVideo->getClientOriginalName();
+        Storage::disk('public')->putFileAs(
+            'qisah/',
+            $uploadVideo,
+            $filenameVideo
+        );
+
+
+        $qisah = new Qisah();
+        $qisah->bab = $bab;
+        $qisah->save();
+
+        //save file to berkas database
+        $berkasAudio = new Berkas();
+        $berkasAudio->qisah_id = $qisah->getKey();
+        $berkasAudio->file_name = $filenameVideo;
+        $berkasAudio->type = 3;
+        $berkasAudio->save();
+
+        return "success";
+    }
+    public function viewQisah($bab)
+    {
+        $qisah =   Qisah::where('bab', $bab)->with('berkas')->get();
+        return view('qisah', ['id'=>$bab, 'data' => $qisah]);
     }
 }

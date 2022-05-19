@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MufrodatController;
 use App\Http\Controllers\MuhadasaController;
 use App\Http\Controllers\TadribController;
+use App\Http\Controllers\TamrinController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,4 +26,13 @@ Route::get('/bab-{id}/mufrodat', [MufrodatController::class, 'getAllMufrodat']);
 Route::get('/bab-{id}/muhadasa', [MuhadasaController::class, 'muhadasa']);
 Route::get('/bab-{id}/tadrib', [TadribController::class, 'tadrib']);
 
-Route::get('/bab-{bab}/istima/qasirah', [MufrodatController::class, 'insertQasirah']);
+Route::post('/bab-{bab}/istima/qasirah', [MufrodatController::class, 'insertQasirah']);
+Route::get('/bab-{id}/istima/qasirah', [MufrodatController::class, 'getAllQasirah']);
+
+Route::post('/bab-{bab}/kalam/khiwar/upload-khiwar', [MuhadasaController::class, 'create']);
+Route::get('/bab-{bab}/kalam/khiwar', [MuhadasaController::class, 'muhadasa']);
+Route::post('/bab-{bab}/kalam/qisah', [MuhadasaController::class, 'uploadQisah']);
+Route::get('/bab-{bab}/kalam/qisah', [MuhadasaController::class, 'viewQisah']);
+
+Route::post('/bab-{bab}/tamrin', [TamrinController::class, 'insertTamrin']);
+Route::get('/bab-{bab}/tamrin', [TamrinController::class, 'viewTamrin']);

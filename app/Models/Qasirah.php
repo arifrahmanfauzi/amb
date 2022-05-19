@@ -14,6 +14,6 @@ class Qasirah extends Model
 
     public function berkas()
     {
-        return $this->hasMany(Berkas::class, 'muhadasa_id', 'id');
+        return $this->hasMany(Berkas::class, 'qasirah_id', 'id');
     }
 }
