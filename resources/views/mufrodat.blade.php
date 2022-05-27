@@ -26,11 +26,16 @@
                     <div class="card file-manager-group">
                         <div class="card-body d-flex align-items-center">
                             <div class="card-body d-flex align-items-center">
-                                <a href="{{ url('/bab-').$id }}/istima/mutaradifat/{{ $mufrodat->id }}">
+                                <a href="javascript:playSound({{ $mufrodat->id }})">
                                     <img src="{{ url('/') }}/storage/mufrodat/{{ $mufrodat->berkas[1]->file_name }}" alt="" class="rounded"
                                         width="300" height="300">
                                 </a>
                             </div>
+                            <audio controls id="{{ $mufrodat->id }}" style="display: none">
+                                <source
+                                    src="{{ url('/') }}/storage/mufrodat/{{ $data[0]['berkas'][0]['file_name'] }}"
+                                    type="audio/mp3">
+                            </audio>
                         </div>
                     </div>
                 </div>
@@ -66,4 +71,11 @@
         </div>
     </div>
 </div>
+@endsection
+@section('script')
+    <script>
+        function playSound(mufrot) {
+            document.getElementById(mufrot).play();
+        };
+    </script>
 @endsection
