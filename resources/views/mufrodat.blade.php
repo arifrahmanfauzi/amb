@@ -33,7 +33,7 @@
                             </div>
                             <audio controls id="{{ $mufrodat->id }}" style="display: none">
                                 <source
-                                    src="{{ url('/') }}/storage/mufrodat/{{ $data[0]['berkas'][0]['file_name'] }}"
+                                    src="{{ url('/') }}/storage/mufrodat/{{ $mufrodat->berkas[0]->file_name }}"
                                     type="audio/mp3">
                             </audio>
                         </div>
