@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MufrodatController;
 use App\Http\Controllers\MuhadasaController;
+use App\Http\Controllers\QiroahController;
 use App\Http\Controllers\TadribController;
 use App\Http\Controllers\TamrinController;
 use Illuminate\Http\Request;
@@ -37,3 +38,5 @@ Route::get('/bab-{bab}/kalam/qisah', [MuhadasaController::class, 'viewQisah']);
 Route::post('/bab-{bab}/tamrin', [TamrinController::class, 'insertTamrin']);
 Route::post('/bab-{bab}/tamrin/muhadasa', [TamrinController::class, 'createMuhadasa']);
 Route::get('/bab-{bab}/tamrin', [TamrinController::class, 'viewTamrinApi']);
+
+Route::get('/bab-{bab}/qiroah', [QiroahController::class, 'getAll']);

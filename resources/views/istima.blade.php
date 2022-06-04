@@ -53,6 +53,15 @@
                                                 </button>
                                             </span>
                                         </a>
+                                        <a href="{{ url('/bab-' . $id .'/istima/qasirah') }}"
+                                            class="text-center d-flex flex-column align-items-center">
+                                            <span class="widget-action-list-item-title">
+                                                <button class="btn btn-outline-dark btn-lg">
+                                                    {{-- <h1> مُحَادَثَة </h1> --}}
+                                                    <h1> التمرين </h1>
+                                                </button>
+                                            </span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

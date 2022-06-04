@@ -129,6 +129,30 @@
                                                 </button>
                                             </span>
                                         </a>
+                                        <a href="{{ url('/bab-' . $id .'/qiroah') }}"
+                                            class="text-center d-flex flex-column align-items-center">
+                                            <span class="widget-action-list-item-title">
+                                                <button class="btn btn-outline-dark btn-lg">
+                                                    <h1> مهارة القراءة </h1>
+                                                </button>
+                                            </span>
+                                        </a>
+                                        <a href="{{ url('/bab-' . $id .'/kitabah') }}"
+                                            class="text-center d-flex flex-column align-items-center">
+                                            <span class="widget-action-list-item-title">
+                                                <button class="btn btn-outline-dark btn-lg">
+                                                    <h1> مهارة الكتابة </h1>
+                                                </button>
+                                            </span>
+                                        </a>
+                                        <a href="{{ url('/bab-' . $id .'/qawait') }}"
+                                            class="text-center d-flex flex-column align-items-center">
+                                            <span class="widget-action-list-item-title">
+                                                <button class="btn btn-outline-dark btn-lg">
+                                                    <h1> القواعد </h1>
+                                                </button>
+                                            </span>
+                                        </a>
                                         <a href="{{ url('/bab-' . $id .'/tamrin') }}"
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
