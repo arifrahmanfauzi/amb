@@ -34,7 +34,7 @@
                                                     @if ($tadrib->nomor_soal == 5)
                                                         <h1>Untuk mengerjakan soal nomor 5 - 6 dan 7 - 8 gunakan link
                                                             berikut <a
-                                                                href="https://docs.google.com/forms/d/14xyjyE_HST_2llLx3OLwSYkixKlJdFtCzrqTW_lljQI/edit?usp=sharing">disini</a>
+                                                                href="https://docs.google.com/forms/d/11w-bH6H1u4ZrmTBdYTqqICTBS_IHUQPhP7Gc8ocxFhY/edit?usp=sharing">disini</a>
                                                         </h1>
 
                                                         @foreach ($tadrib->berkas as $berkas)
@@ -93,28 +93,32 @@
                                                                 </div>
                                                                 <audio controls>
                                                                     <source
-                                                                        src="{{ env('APP_URL') }}/storage/tamrin/{{ $tadrib->berkas[0]['file_name'] }}"
+                                                                        src="{{ env('APP_URL') }}/storage/tamrin/{{ $tadrib->berkas[1]['file_name'] }}"
                                                                         type="audio/mpeg">
                                                                 </audio>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    @elseif ($tadrib->nomor_soal == 6)
+                                                    <p>Bacalah cerita dibawah ini dan rekamlah bacaan anda!</p>
+                                                    {!! $tadrib->berkas[0]['file_name'] !!}
+
                                                 @elseif ($tadrib->nomor_soal == 7)
-                                                    <p>buatlah video kemudian ceritakan ulang cerita yang terdapat dalam
-                                                        video di bawah ini dengan fasih, baik dan benar.</p>
-                                                    <div class="row justify-content-center">
-                                                        <div class="col-xl-6">
-                                                            <div class="card widget widget-info">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-xl-6">
+                                                        <div class="card widget widget-info">
+
                                                                 <div class="card-body">
+                                                                    <h5>Dengar dan tulislah kalimat yang anda dengar dengan benar!</h5>
                                                                     <div class="widget-info-container">
                                                                         <div
                                                                             class="example-content bg-white overflow-hidden">
 
-                                                                            <video width="320" height="240" controls>
+                                                                            <audio width="320" height="240" controls>
                                                                                 <source
                                                                                     src="{{ url('/') }}/storage/tamrin/{{ $tadrib->berkas[0]['file_name'] }}"
-                                                                                    type="video/mp4">
-                                                                            </video>
+                                                                                    type="audio/mpeg">
+                                                                            </audio>
                                                                         </div>
                                                                         <br>
 
@@ -124,6 +128,7 @@
                                                         </div>
                                                     </div>
                                                 @else
+
                                                 @endif
                                             </div>
 

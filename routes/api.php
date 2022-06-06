@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KitabahController;
 use App\Http\Controllers\MufrodatController;
 use App\Http\Controllers\MuhadasaController;
 use App\Http\Controllers\QiroahController;
@@ -17,6 +18,8 @@ Route::post('/register', [AuthController::class,'register']);
 Route::post('/bab-{id}/upload-mufrodat', [MufrodatController::class, 'upload']);
 Route::post('/bab-{id}/upload-muhadasa', [MuhadasaController::class, 'create']);
 Route::post('/bab-{id}/upload-tadrib', [TadribController::class, 'create']);
+
+Route::post('/bab-{id}/upload-istima-tamrin', [MufrodatController::class, 'uploadIstimaTamrin']);
 
 Route::put('/bab-{bab}/update-mufrodat/{id}', [MufrodatController::class, 'update']);
 Route::put('/bab-{bab}/update-muhadasa/{id}', [MuhadasaController::class, 'update']);
@@ -40,3 +43,5 @@ Route::post('/bab-{bab}/tamrin/muhadasa', [TamrinController::class, 'createMuhad
 Route::get('/bab-{bab}/tamrin', [TamrinController::class, 'viewTamrinApi']);
 
 Route::get('/bab-{bab}/qiroah', [QiroahController::class, 'getAll']);
+
+Route::post('/bab-{bab}/kitabah/tamrin', [KitabahController::class, 'uploadTamrin']);

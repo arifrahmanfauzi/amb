@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kitabah extends Model
+class IstimaTamrin extends Model
 {
     use HasFactory;
-    protected $table = 'kitabah';
+
+    protected $table = 'istima_tamrin';
 
     public $timestamps = false;
 
     public function berkas()
     {
-        return $this->hasMany(Berkas::class, 'kitabah_id', 'id');
+        return $this->hasMany(Berkas::class, 'istima_tamrin_id', 'id');
     }
 }

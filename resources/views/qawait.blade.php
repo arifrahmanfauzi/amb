@@ -35,7 +35,7 @@
                             <div class="widget-action-list-container">
                                 <ul class="list-unstyled d-flex no-m">
                                     <li class="widget-action-list-item">
-                                        <a href="{{ url('/bab-' . $bab .'/qawait/qawait') }}"
+                                        <a href="{{ url('/bab-' . $bab .'/qawait/fiil') }}"
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">

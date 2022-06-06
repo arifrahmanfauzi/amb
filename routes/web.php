@@ -42,17 +42,22 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/bab-{id}/istima/mutaradifat/{mufrodat}', [MufrodatController::class, 'viewMufrodatbyID']);
     Route::get('/bab-{bab}/istima/qasirah', [MufrodatController::class, 'viewQasirah']);
     Route::get('/bab-{bab}/istima/qasirah/{qasirah}', [MufrodatController::class, 'viewQasirahbyID']);
-    Route::get('/bab-{bab}/istima/tamrin/');
+    Route::get('/bab-{bab}/istima/tamrin/', [MufrodatController::class, 'viewIstimaTamrin']);
 
     Route::get('/bab-{id}/kalam/khiwar', [MuhadasaController::class, 'viewMuhadasa']);
     Route::get('/bab-{bab}/kalam/qisah', [MuhadasaController::class, 'viewQisah']);
 
     Route::get('/bab-{bab}/qiroah', [QiroahController::class, 'viewQiroah']);
     Route::get('/bab-{bab}/qiroah/qiroah', [QiroahController::class, 'detailQiroah']);
+    Route::get('/bab-{bab}/qiroah/tamrin', [QiroahController::class, 'viewTamrin']);
 
     Route::get('/bab-{bab}/kitabah', [KitabahController::class, 'viewKitabah']);
+    Route::get('/bab-{bab}/kitabah/kitabah', [KitabahController::class, 'detailKitabah']);
+    Route::get('/bab-{bab}/kitabah/tamrin', [KitabahController::class, 'viewTamrin']);
 
     Route::get('/bab-{bab}/qawait', [QawaitController::class, 'viewQawait']);
+    Route::get('/bab-{bab}/qawait/fiil', [QawaitController::class, 'viewFiil']);
+    Route::get('/bab-{bab}/qawait/tamrin', [QawaitController::class, 'viewTamrin']);
 
 
     Route::get('/bab-{bab}/tamrin', [TamrinController::class, 'viewTamrin']);

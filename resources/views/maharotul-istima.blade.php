@@ -26,7 +26,7 @@
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">
-                                                    <h1> البَابُ الرابع</h1>
+                                                    <h1> الباب الرابع</h1>
                                                 </button>
                                             </span>
                                         </a>
@@ -34,7 +34,7 @@
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">
-                                                    <h1> البَابُ الخَامِسْ</h1>
+                                                    <h1> الباب الخامس</h1>
                                                 </button>
                                             </span>
                                         </a>
@@ -42,7 +42,7 @@
                                             class="text-center d-flex flex-column align-items-center">
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">
-                                                    <h1> البَابُ السَّادِسْ </h1>
+                                                    <h1> الباب السّادس </h1>
                                                 </button>
                                             </span>
                                         </a>
