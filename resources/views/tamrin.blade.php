@@ -19,6 +19,12 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <h1>Untuk mengerjakan soal dibawah gunakan link
+                        berikut <a
+                            href="https://docs.google.com/forms/d/11w-bH6H1u4ZrmTBdYTqqICTBS_IHUQPhP7Gc8ocxFhY/edit?usp=sharing">disini</a>
+                    </h1>
+                </div>
                 @forelse ($data as $tadrib)
                     <div class="row">
                         <div class="col">
@@ -32,11 +38,9 @@
                                             <div class="alert alert-custom" role="alert">
                                                 @if ($tadrib->berkas[0]['type'] == 1)
                                                     @if ($tadrib->nomor_soal == 5)
-                                                        <h1>Untuk mengerjakan soal nomor 5 - 6 dan 7 - 8 gunakan link
-                                                            berikut <a
-                                                                href="https://docs.google.com/forms/d/11w-bH6H1u4ZrmTBdYTqqICTBS_IHUQPhP7Gc8ocxFhY/edit?usp=sharing">disini</a>
-                                                        </h1>
-
+                                                        <h3>jawablah percakapan di bawah ini menggunakan rekaman suara anda
+                                                            dengan baik dan benar.</h3>
+                                                        <br>
                                                         @foreach ($tadrib->berkas as $berkas)
                                                             <div>
                                                                 <div class="custom-alert-icon icon-primary"><img
@@ -99,17 +103,14 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    @elseif ($tadrib->nomor_soal == 6)
-                                                    <p>Bacalah cerita dibawah ini dan rekamlah bacaan anda!</p>
-                                                    {!! $tadrib->berkas[0]['file_name'] !!}
-
-                                                @elseif ($tadrib->nomor_soal == 7)
-                                                <div class="row justify-content-center">
-                                                    <div class="col-xl-6">
-                                                        <div class="card widget widget-info">
+                                                @elseif ($tadrib->nomor_soal == 6)
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-xl-6">
+                                                            <div class="card widget widget-info">
 
                                                                 <div class="card-body">
-                                                                    <h5>Dengar dan tulislah kalimat yang anda dengar dengan benar!</h5>
+                                                                    <h5>Dengar dan tulislah kalimat yang anda dengar dengan
+                                                                        benar!</h5>
                                                                     <div class="widget-info-container">
                                                                         <div
                                                                             class="example-content bg-white overflow-hidden">
@@ -127,8 +128,10 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                @elseif ($tadrib->nomor_soal == 7)
+                                                    <p>Bacalah cerita dibawah ini dan rekamlah bacaan anda!</p>
+                                                    {!! $tadrib->berkas[0]['file_name'] !!}
                                                 @else
-
                                                 @endif
                                             </div>
 
