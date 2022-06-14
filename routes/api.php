@@ -20,6 +20,7 @@ Route::post('/bab-{id}/upload-muhadasa', [MuhadasaController::class, 'create']);
 Route::post('/bab-{id}/upload-tadrib', [TadribController::class, 'create']);
 
 Route::post('/bab-{id}/upload-istima-tamrin', [MufrodatController::class, 'uploadIstimaTamrin']);
+Route::get('/bab-{id}/istima-tamrin', [MufrodatController::class, 'getIstimaTamrin']);
 
 Route::put('/bab-{bab}/update-mufrodat/{id}', [MufrodatController::class, 'update']);
 Route::put('/bab-{bab}/update-muhadasa/{id}', [MuhadasaController::class, 'update']);

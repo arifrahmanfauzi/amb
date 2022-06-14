@@ -131,6 +131,53 @@
                                                 @elseif ($tadrib->nomor_soal == 7)
                                                     <p>Bacalah cerita dibawah ini dan rekamlah bacaan anda!</p>
                                                     {!! $tadrib->berkas[0]['file_name'] !!}
+                                                @elseif ($tadrib->nomor_soal == 8)
+                                                    <table class="table">
+                                                        <thead class="table-dark">
+                                                            <tr>
+                                                                <th style="font-size: 2.5rem">أَنْتِ</th>
+                                                                <th style="font-size: 2.5rem">أَنْتَ</th>
+                                                                <th style="font-size: 2.5rem">هِيَ</th>
+                                                                <th style="font-size: 2.5rem">هُوَ</th>
+                                                                <th style="font-size: 2.5rem">نَحْنُ</th>
+                                                                <th style="font-size: 2.5rem">أَنَا</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">كَتَبْتُ</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">فَتَحْنَا</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">فَحَصَ</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">جَلَسَ</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                                <td style="font-size: 2.5rem">...</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 @else
                                                 @endif
                                             </div>

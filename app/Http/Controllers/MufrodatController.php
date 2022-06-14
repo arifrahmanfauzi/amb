@@ -221,53 +221,92 @@ class MufrodatController extends Controller
 
         return view('istima-tamrin', ['bab' => $bab, 'data' => $data]);
     }
+    public function getIstimaTamrin($bab, Request $request)
+    {
+        $tamrin = new IstimaTamrin();
+        $data = $tamrin->where('bab', $bab)->with('berkas')->get();
+        return $data;
+    }
 
     public function uploadIstimaTamrin($bab, Request $request)
     {
         try {
-            $request->validate([
-                'file_audio' => 'required|mimes:application/octet-stream,audio/mpeg,mpga,mp3,wav',
-                'file_image' => 'required|mimes:png,jpeg,jpg,svg'
+            $validated = $request->validate([
+                'file_audio' => 'mimes:application/octet-stream,audio/mpeg,mpga,mp3,wav',
+                'file_image' => 'mimes:png,jpeg,jpg,svg'
             ]);
         } catch (\Throwable $th) {
             return response()->json($th->getMessage(), 422);
         }
 
-        $uploadFileAudio = $request->file('file_audio');
-        $filenameAudio = time().$uploadFileAudio->getClientOriginalName();
-        Storage::disk('public')->putFileAs(
-            'istimaTamrin/',
-            $uploadFileAudio,
-            $filenameAudio
-        );
+        if ($request->file_image) {
+            $uploadFileImage = $request->file('file_image');
+            $filenameImage = time().$uploadFileImage->getClientOriginalName();
+            Storage::disk('public')->putFileAs(
+                'istimaTamrin/',
+                $uploadFileImage,
+                $filenameImage
+            );
 
-        $uploadFileImage = $request->file('file_image');
-        $filenameImage = time().$uploadFileImage->getClientOriginalName();
-        Storage::disk('public')->putFileAs(
-            'istimaTamrin/',
-            $uploadFileImage,
-            $filenameImage
-        );
+            //save mufrodat to database
+            $mufrodat = new IstimaTamrin();
+            $mufrodat->bab = $bab;
+            $mufrodat->nomor = $request->nomor;
+            $mufrodat->save();
+
+            //save file to berkas database
+            $berkasImage = new Berkas();
+            $berkasImage->istima_tamrin_id = $mufrodat->getKey();
+            $berkasImage->file_name = $filenameImage;
+            $berkasImage->type = 2;
+            $berkasImage->save();
+        }
+        if ($request->input('file_audio')) {
+            $uploadFileAudio = $request->file('file_audio');
+            $filenameAudio = time().$uploadFileAudio->getClientOriginalName();
+            Storage::disk('public')->putFileAs(
+                'istimaTamrin/',
+                $uploadFileAudio,
+                $filenameAudio
+            );
+
+            //save mufrodat to database
+            $mufrodat = new IstimaTamrin();
+            $mufrodat->bab = $bab;
+            $mufrodat->nomor = $request->nomor;
+            $mufrodat->save();
+
+            //save file to berkas database
+            $berkasAudio = new Berkas();
+            $berkasAudio->istima_tamrin_id = $mufrodat->getKey();
+            $berkasAudio->file_name = $filenameAudio;
+            $berkasAudio->type = 1;
+            $berkasAudio->save();
+        }
+
+
+
+
 
 
         //save mufrodat to database
-        $mufrodat = new IstimaTamrin();
-        $mufrodat->bab = $bab;
-        $mufrodat->nomor = $request->nomor;
-        $mufrodat->save();
+        // $mufrodat = new IstimaTamrin();
+        // $mufrodat->bab = $bab;
+        // $mufrodat->nomor = $request->nomor;
+        // $mufrodat->save();
 
         //save file to berkas database
-        $berkasAudio = new Berkas();
-        $berkasAudio->istima_tamrin_id = $mufrodat->getKey();
-        $berkasAudio->file_name = $filenameAudio;
-        $berkasAudio->type = 1;
-        $berkasAudio->save();
+        // $berkasAudio = new Berkas();
+        // $berkasAudio->istima_tamrin_id = $mufrodat->getKey();
+        // $berkasAudio->file_name = $filenameAudio;
+        // $berkasAudio->type = 1;
+        // $berkasAudio->save();
 
-        $berkasImage = new Berkas();
-        $berkasImage->istima_tamrin_id = $mufrodat->getKey();
-        $berkasImage->file_name = $filenameImage;
-        $berkasImage->type = 2;
-        $berkasImage->save();
+        // $berkasImage = new Berkas();
+        // $berkasImage->istima_tamrin_id = $mufrodat->getKey();
+        // $berkasImage->file_name = $filenameImage;
+        // $berkasImage->type = 2;
+        // $berkasImage->save();
 
         return "success";
     }
