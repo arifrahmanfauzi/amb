@@ -2,6 +2,25 @@
 @section('tittle')
     <title>Bab {{ $id }}</title>
 @endsection
+@section('css')
+    <style>
+        video::-webkit-media-controls-overlay-play-button {
+            -webkit-appearance: media-overlay-play-button;
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -40px;
+            margin-top: -40px;
+            border: none;
+            box-sizing: border-box;
+            background-color: transparent;
+            width: 80px;
+            height: 80px;
+            padding: 0;
+        }
+    </style>
+@endsection
 @section('app-content')
     <div class="app-content">
         <div class="content-wrapper">

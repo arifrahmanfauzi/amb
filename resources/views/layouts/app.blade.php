@@ -28,6 +28,7 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="{{ env('APP_URL') }}/assets/images/other/logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="{{ env('APP_URL') }}/assets/images/other/logo.png" />
+    @yield('css')
 </head>
 
 <body>
