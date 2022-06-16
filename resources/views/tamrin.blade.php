@@ -65,9 +65,11 @@
                                                                 <div class="custom-alert-icon icon-primary"><img
                                                                         src="{{ env('APP_URL') }}/assets/images/other/man.png"
                                                                         alt="" srcset=""></div>
+                                                                <a hidden href="javascript:playSound({{ $berkas->id }})"
+                                                                    class="btn btn-primary">play</a>
                                                                 <div class="alert-content d-flex">
                                                                     <div class="col-xl-5">
-                                                                        <audio controls>
+                                                                        <audio id="{{ $berkas->id }}" controls>
                                                                             <source
                                                                                 src="{{ env('APP_URL') }}/storage/tamrin/{{ $berkas->file_name }}"
                                                                                 type="audio/mpeg">
@@ -96,6 +98,7 @@
                                                                     src="{{ env('APP_URL') }}/assets/images/other/man.png"
                                                                     alt="" srcset="">
                                                             </div>
+
                                                             <div class="alert-content d-flex">
                                                                 <div class="col-xl-5">
                                                                     <audio controls>
@@ -245,4 +248,11 @@
                 </div>
             </div>
         </div>
+    @endsection
+    @section('script')
+        <script>
+            function playSound(muhadasa) {
+                document.getElementById(muhadasa).play();
+            };
+        </script>
     @endsection

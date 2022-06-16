@@ -44,5 +44,7 @@ Route::post('/bab-{bab}/tamrin/muhadasa', [TamrinController::class, 'createMuhad
 Route::get('/bab-{bab}/tamrin', [TamrinController::class, 'viewTamrinApi']);
 
 Route::get('/bab-{bab}/qiroah', [QiroahController::class, 'getAll']);
+Route::post('/bab-{bab}/qiroah', [QiroahController::class, 'uploadQiroah']);
 
 Route::post('/bab-{bab}/kitabah/tamrin', [KitabahController::class, 'uploadTamrin']);
+Route::post('/bab-{bab}/kitabah', [KitabahController::class, 'uploadKitabah']);

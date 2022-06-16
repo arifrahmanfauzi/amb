@@ -19,6 +19,17 @@ class KitabahController extends Controller
         $kitabah = Kitabah::where('bab', $bab)->whereNull('tamrin')->get();
         return view('detail-kitabah', ['bab' => $bab, 'data' => $kitabah]);
     }
+    public function uploadKitabah($bab, Request $request)
+    {
+        $kitabah = new Kitabah();
+        $kitabah->bab = $bab;
+        $kitabah->text = $request->text;
+        $kitabah->tamrin = $request->tamrin;
+        $kitabah->link = $request->link;
+        $kitabah->save();
+
+        return "success";
+    }
 
     public function uploadTamrin($bab, Request $request)
     {
@@ -38,6 +49,7 @@ class KitabahController extends Controller
             $uploadAudio,
             $filenameAudio
         );
+
 
         $kitabah_id = DB::table('kitabah')->select('id')->where('tamrin', 1)->where('bab', $bab)->get();
 
