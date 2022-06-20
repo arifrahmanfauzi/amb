@@ -14,12 +14,25 @@ class QawaitController extends Controller
 
     public function viewFiil($bab)
     {
-        $fiil = Fiil::where('bab', $bab)->get();
-        return view('fiil', ['bab' => $bab, 'data' => $fiil]);
+        if ($bab == 6) {
+            $fiil = Fiil::where('bab', $bab)->get();
+            return view('fiil', ['bab' => $bab, 'data' => $fiil]);
+        }
+        if ($bab == 5 || 4) {
+            $fiil = Fiil::where('bab', $bab)->get();
+            return view('viewfiil', ['bab' => $bab, 'data' => $fiil]);
+        }
     }
 
     public function viewTamrin($bab)
     {
-        return view('qawait-tamrin', ['bab' => $bab]);
+        if ($bab == 6) {
+            # code...
+            return view('qawait-tamrin', ['bab' => $bab]);
+        }
+        if ($bab == 5 || 4) {
+            $fiil = Fiil::where('bab', $bab)->where('tamrin', 1)->get();
+            return view('viewqawait-tamrin', ['bab' => $bab, 'data' => $fiil]);
+        }
     }
 }

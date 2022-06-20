@@ -51,7 +51,7 @@ class KitabahController extends Controller
         );
 
 
-        $kitabah_id = DB::table('kitabah')->select('id')->where('tamrin', 1)->where('bab', $bab)->get();
+        $kitabah_id = DB::table('kitabah')->where('tamrin', 1)->where('bab', $bab)->get('id');
 
         //save file to berkas database
         $berkasAudio = new Berkas();

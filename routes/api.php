@@ -39,8 +39,13 @@ Route::get('/bab-{bab}/kalam/khiwar', [MuhadasaController::class, 'muhadasa']);
 Route::post('/bab-{bab}/kalam/qisah', [MuhadasaController::class, 'uploadQisah']);
 Route::get('/bab-{bab}/kalam/qisah', [MuhadasaController::class, 'viewQisah']);
 
+Route::post('/bab-{bab}/tamrin/mufrodat', [TamrinController::class, 'insertTamrinMufrodat']);
+Route::post('/bab-{bab}/tamrin/istima', [TamrinController::class, 'insertTamrinIstima']);
+Route::post('/bab-{bab}/tamrin/muhadasa', [TamrinController::class, 'insertTamrinMuhadasa']);
+Route::post('/bab-{bab}/tamrin/kalam', [TamrinController::class, 'insertTamrinKalam']);
+Route::post('/bab-{bab}/tamrin/qiroah', [TamrinController::class, 'insertTamrinQiroah']);
+Route::post('/bab-{bab}/tamrin/kitabah', [TamrinController::class, 'insertTamrinKitabah']);
 Route::post('/bab-{bab}/tamrin', [TamrinController::class, 'insertTamrin']);
-Route::post('/bab-{bab}/tamrin/muhadasa', [TamrinController::class, 'createMuhadasa']);
 Route::get('/bab-{bab}/tamrin', [TamrinController::class, 'viewTamrinApi']);
 
 Route::get('/bab-{bab}/qiroah', [QiroahController::class, 'getAll']);
