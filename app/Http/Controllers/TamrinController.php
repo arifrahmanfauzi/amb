@@ -78,6 +78,7 @@ class TamrinController extends Controller
         $tamrin->bab = $bab;
         $tamrin->nomor_soal = $request->nomor_soal;
         $tamrin->type = TamrinType::MUFRODAT;
+        $tamrin->soal_jawaban = $request->soal_jawaban;
         $tamrin->save();
 
         //save file to berkas database
@@ -98,7 +99,7 @@ class TamrinController extends Controller
     public function insertTamrinIstima($bab, Request $request)
     {
         $tamrin = Tamrin::firstOrCreate(
-            ['nomor_soal' => $request->nomor_soal, 'bab' => $bab, 'type' => TamrinType::ISTIMA, 'soal_jawaban' => $request->soal_jawaban],
+            ['nomor_soal' => $request->nomor_soal, 'bab' => $bab],
             ['nomor_soal' => $request->nomor_soal, 'bab' => $bab, 'type' => TamrinType::ISTIMA, 'soal_jawaban' => $request->soal_jawaban]
         );
 
