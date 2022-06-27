@@ -19,7 +19,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="row text-center">
+                    <div class="alert alert-custom" role="alert">
+                        <div class="alert-content">
+                            <div class="example">
+                                <p>Dengarkan dan jawablah pertanyaan di bawah ini dengan benar!
+                                    Silahkan mengumpulkan jawaban anda pada link berikut : </p>
+                                <a href="https://docs.google.com/forms/d/1gpw1VyGbUrWyksLYZR_UXHhHo03CZi8NqKjz_5uLRMw/edit?usp=sharing"
+                                    target="_blank">Klik Disini</a>
+                                {{-- <audio controls="">
+                                @switch($id)
+                                    @case(4)
 
+                                        @break
+                                    @case(5)
+                                    <source src="{{ url('/') }}/storage/mufrodat/mufrodat.mpeg" type="audio/mpeg">
+                                        @break
+                                    @case(6)
+                                    <source src="{{ url('/') }}/storage/mufrodat/mufrodat-6.mpeg" type="audio/mpeg">
+
+                                        @break
+
+                                    @default
+                                        <h4>Not found</h4>
+                                @endswitch
+                            </audio> --}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     @forelse ($data as $tamrin)
                         @if ($tamrin->pertanyaan)
@@ -67,35 +95,19 @@
                     @empty
                         <h1>Data is empty</h1>
                     @endforelse
-                    <div class="row text-center">
-                        <div class="alert alert-custom" role="alert">
-                            <div class="alert-content">
-                                <div class="example">
-                                    <p>Dengarkan dan jawablah pertanyaan di bawah ini dengan benar!
-                                        Silahkan mengumpulkan jawaban anda pada link berikut : </p>
-                                    <a href="https://docs.google.com/forms/d/1gpw1VyGbUrWyksLYZR_UXHhHo03CZi8NqKjz_5uLRMw/edit?usp=sharing"
-                                        target="_blank">Klik Disini</a>
-                                    {{-- <audio controls="">
-                                    @switch($id)
-                                        @case(4)
 
-                                            @break
-                                        @case(5)
-                                        <source src="{{ url('/') }}/storage/mufrodat/mufrodat.mpeg" type="audio/mpeg">
-                                            @break
-                                        @case(6)
-                                        <source src="{{ url('/') }}/storage/mufrodat/mufrodat-6.mpeg" type="audio/mpeg">
-
-                                            @break
-
-                                        @default
-                                            <h4>Not found</h4>
-                                    @endswitch
-                                </audio> --}}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="row">
+                    @if ($bab == 4)
+                        <audio controls id="mufrot">
+                            <source src="{{ url('/') }}/storage/istimaTamrin/istima-tamrin-4.mp3" type="audio/mp3">
+                        </audio>
+                    @endif
+                    @if ($bab == 5)
+                        <audio controls id="mufrot">
+                            <source src="{{ url('/') }}/storage/istimaTamrin/istima-tamrin-5.mp3" type="audio/mp3">
+                        </audio>
+                    @endif
                 </div>
             </div>
         </div>

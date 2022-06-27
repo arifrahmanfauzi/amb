@@ -196,7 +196,7 @@
                                                 class="text-center d-flex flex-column align-items-center">
                                                 <span class="widget-action-list-item-title">
                                                     <button class="btn btn-outline-dark btn-lg">
-                                                        @if ($bab == 5)
+                                                        @if ($id == 5)
                                                             <h1>المصدر</h1>
                                                         @endif
                                                         <h1> عامل النواسخ </h1>
