@@ -27,27 +27,67 @@
                                     Silahkan mengumpulkan jawaban anda pada link berikut : </p>
                                 <a href="https://docs.google.com/forms/d/1gpw1VyGbUrWyksLYZR_UXHhHo03CZi8NqKjz_5uLRMw/edit?usp=sharing"
                                     target="_blank">Klik Disini</a>
-                                {{-- <audio controls="">
-                                @switch($id)
-                                    @case(4)
-
-                                        @break
-                                    @case(5)
-                                    <source src="{{ url('/') }}/storage/mufrodat/mufrodat.mpeg" type="audio/mpeg">
-                                        @break
-                                    @case(6)
-                                    <source src="{{ url('/') }}/storage/mufrodat/mufrodat-6.mpeg" type="audio/mpeg">
-
-                                        @break
-
-                                    @default
-                                        <h4>Not found</h4>
-                                @endswitch
-                            </audio> --}}
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row text-center">
+                    <div class="col-xl-4 align-center">
+                        <div class="card file-manager-group">
+                            <div class="card-body d-flex align-items-center">
+                                @if ($bab == 4)
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-6">
+                                            <div class="card widget widget-info">
+                                                <div class="card-body">
+                                                    <div class="widget-info-container">
+                                                        <a href="javascript:playSound(0)">
+                                                            <img src="{{ url('/') }}/storage/istimaTamrin/16551947961.contoh.jpg"
+                                                                alt="" class="rounded" width="300"
+                                                                height="300">
+                                                        </a>
+                                                        <audio controls id="0" style="display: none">
+                                                            <source
+                                                                src="{{ url('/') }}/storage/istimaTamrin/contoh-4.mp3"
+                                                                type="audio/mp3">
+                                                        </audio>
+                                                        <br>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                                @if ($bab == 5)
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-6">
+                                            <div class="card widget widget-info">
+                                                <div class="card-body">
+                                                    <div class="widget-info-container">
+                                                        <a href="javascript:playSound(0)">
+                                                            <img src="{{ url('/') }}/storage/istimaTamrin/contoh-5.png"
+                                                                alt="" class="rounded" width="300"
+                                                                height="300">
+                                                        </a>
+                                                        <audio controls id="0" style="display: none">
+                                                            <source
+                                                                src="{{ url('/') }}/storage/istimaTamrin/contoh-5.mpeg"
+                                                                type="audio/mpeg">
+                                                        </audio>
+                                                        <br>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     @forelse ($data as $tamrin)
                         @if ($tamrin->pertanyaan)
@@ -60,7 +100,6 @@
                         <div class="col-xl-4">
                             <div class="card file-manager-group">
                                 <div class="card-body d-flex align-items-center">
-
                                     @foreach ($tamrin->berkas as $berkas)
                                         @if ($berkas->type == 1)
                                             <audio controls id="{{ $tamrin->id }}" style="display: none">
