@@ -8,6 +8,7 @@ use App\Http\Controllers\QawaitController;
 use App\Http\Controllers\QiroahController;
 use App\Http\Controllers\TadribController;
 use App\Http\Controllers\TamrinController;
+use App\Http\Controllers\UASController;
 use App\Models\Qawait;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/bab-{bab}/kalam', function ($bab) {
         return view('kalam', ['id' => $bab]);
     });
+
+    Route::get('/uas', [UASController::class, 'viewUAS']);
 
     Route::get('/bab-{id}/istima/mutaradifat', [MufrodatController::class, 'viewMufrodat']);
     Route::get('/bab-{id}/istima/mutaradifat/{mufrodat}', [MufrodatController::class, 'viewMufrodatbyID']);
