@@ -49,6 +49,9 @@
                                                 <span class="widget-action-list-item-title">
                                                     <button class="btn btn-outline-dark btn-lg">
                                                         {{-- <h1> مُحَادَثَة </h1> --}}
+														@if ($id == 6)
+                                                             <h1> مُحَادَثَة </h1> 
+                                                        @endif
                                                         @if ($id == 5)
                                                             <h1>جملة ضغيرة عن المهن </h1>
                                                         @endif
