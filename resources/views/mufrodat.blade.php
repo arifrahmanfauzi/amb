@@ -14,7 +14,7 @@
                                     class="material-icons">chevron_left</i>Kembali</button>
                         </div>
                         <div class="page-description-actions">
-                            <h1>المُتَرَادِفَاتْ</h1>
+                            <h1>المفردات</h1>
                         </div>
                     </div>
                 </div>
