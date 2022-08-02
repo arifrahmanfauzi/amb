@@ -197,9 +197,10 @@
                                                 <span class="widget-action-list-item-title">
                                                     <button class="btn btn-outline-dark btn-lg">
                                                         @if ($id == 5)
-                                                            <h1>المصدر</h1>
+                                                            <h1>المصدر </h1>
+                                                          @els
+                                                          <h1> عامل النواسخ </h1>
                                                         @endif
-                                                        <h1> عامل النواسخ </h1>
                                                     </button>
                                                 </span>
                                             </a>
