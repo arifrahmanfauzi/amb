@@ -198,7 +198,7 @@
                                                     <button class="btn btn-outline-dark btn-lg">
                                                         @if ($id == 5)
                                                             <h1>المصدر </h1>
-                                                          @els
+                                                          @else
                                                           <h1> عامل النواسخ </h1>
                                                         @endif
                                                     </button>
