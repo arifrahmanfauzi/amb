@@ -11,8 +11,6 @@
                     <div class="d-flex justify-content-center align-content-center p-3 gap-5">
                         <img src="assets/images/other/logo.png" alt="" class="rounded float-start"
                             width="100" height="100">
-                        <img src="assets/images/other/UINSA.png" alt="" class="rounded float-end"
-                            width="100" height="100">
                     </div>
                 </div>
                 <div class="col-xl-6">
@@ -26,7 +24,7 @@
                                             <span class="widget-action-list-item-title">
                                                 <button class="btn btn-outline-dark btn-lg">
                                                     {{-- <h1> مَهَارَةُ الاِسْتِمَاعْ وَالْكَلَامْ </h1> --}}
-                                                    <h4> Media Belajar Istima' dan Kalam </h4>
+                                                    <h4> Media Belajar Bahasa Arab </h4>
                                                 </button>
                                             </span>
                                         </a>
