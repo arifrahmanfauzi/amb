@@ -45,7 +45,7 @@
                                 <br>
 Alhamdulillahi rabbil 'alamin, puji syukur hanya milik Allah SWT yang telah menganugerahkan hidayah, taufiq dan inayah sehingga proses pengembangan media pembelahjaran Bahasa Arab pada madrasah ini dapat diselesaikan. Shalawat serta salam semoga tercurah keharibaan Rasulullah SAW. Aamiin.
 Perkembangan ilmu pengetahuan, teknologi dan komunikasi di era global mengalami perubahan yang sangat cepat dan sulit diprediksi. Kurikulum Bahasa Arab pada madrasah harus bisa mengantisipasi cepatnya perubahan tersebut disamping menjalankan mandat mewariskan budaya-karakter bangsa dan nilai-nilai akhlak pada peserta didik. Dengan demikian, generasi muda akan memiliki kepribadian, berkarakter kuat dan tidak tercerabut dari akar budaya bangsa namun tetap bisa menjadi aktor di zamannya.
-Aplikasi ini dibuat sebagai media pendukung pembelajaran bahasa Arab maharah istima’ dan maharah kalam kelas VIII, Semester II Tingkat Madrasah Tsanawiyah.
+Aplikasi ini dibuat sebagai media pendukung pembelajaran bahasa Arab kelas VIII, Semester II Tingkat Madrasah Tsanawiyah.
 Materi maharah istima’ dan maharah kalam yang terdapat pada aplikasi ini bersumber dari buku ajar Bahasa Arab cetakan Kementerian Agama Republik Indonesia Tahun 2020 dengan nomor ISBN : 978-623-6687-39-0 (Jilid lengkap) dan ISBN : 978-623-6687-41-3 (Jilid 2)
                             </p>
                         </div>
