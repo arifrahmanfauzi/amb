@@ -22,8 +22,6 @@
                         class="d-flex flex-column align-items-center justify-content-center align-content-center p-2 gap-3">
                         <img src="{{ url("assets/images/other/logo.png") }}" alt="" class="rounded float-end"
                             width="100" height="100">
-                        <img src="{{ url("assets/images/other/UINSA.png") }}" alt="" class="rounded float-start"
-                            width="100" height="100">
                     </div>
                 </div>
                 <div class="col-xl-6">
